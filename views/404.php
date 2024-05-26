@@ -16,21 +16,29 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
 <div class="wrapper">
+  <section class="content">
+<div class="error-page">
+<h2 class="headline text-warning"> 404</h2>
+<div class="error-content">
+<h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Pagina no encontrada.</h3>
+<p>
 
-  <!-- Navbar -->
-  <?php include("views/modulos/header.php");?>
-  <!-- /.n avbar -->
+Regresar <a href="login.php">al login</a>
+</p>
+</div>
+</div>
 
-  <!-- Main Sidebar Container -->
-  <?php include("views/modulos/menu.php");?>
+</form>
+</div>
 
+</div>
+
+</section>                    
   <!-- Content Wrapper. Contains page content -->
+  
   <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
     
     <div class="tab-content">
-      <div class="tab-empty">
-        <h2 class="display-4">No tab selected!</h2>
-      </div>
       <div class="tab-loading">
         <div>
           <h2 class="display-4">Tab is loading <i class="fa fa-sync fa-spin"></i></h2>
@@ -38,8 +46,8 @@
       </div>
     </div>
   </div>
+  
   <!-- /.content-wrapper -->
-  <?php include("views/modulos/footer.php");?>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -63,7 +71,6 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+
 </body>
 </html>
