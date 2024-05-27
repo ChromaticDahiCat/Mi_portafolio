@@ -16,7 +16,7 @@
         public function set_names(){
             return $this->dbh->query("SET NAMES 'utf8'");
         }
-        public static functio ruta(){
+        public static function ruta(){
             //QA
             return "http://localhost/parcial3Portafolio/";
         }
