@@ -11,7 +11,7 @@
         <div class="image">
         </div>
         <div class="info">
-          <input type="hidden" id="usu_idx" value="<?php echo $_SESSION["usu_id"] ?>">
+          <input type="hidden" id="usu_idx" value="<?php echo $_SESSION["usu_id"]; ?>">
           <a href="#" class="d-block"><?php echo $_SESSION["nombre"];?></a>
         </div>
       </div>
@@ -26,24 +26,33 @@
                with font-awesome or any other icon font library -->
         
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="http://localhost/parcial3Portafolio/views/inicio.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Inicio
                 
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="http://localhost/parcial3Portafolio/views/perfil.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Perfil
                 
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="pages/Estudios.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Estudios
+                
+              </p>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -51,16 +60,7 @@
                 
               </p>
             </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                
-              </p>
-            </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

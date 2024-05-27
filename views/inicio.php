@@ -1,5 +1,5 @@
 <?php
-define("BASE URL","/parcial3Portafolio/views/");
+define("BASE_URL","/parcial3Portafolio/views/");
 require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
  ?>
@@ -125,6 +125,6 @@ if (isset($_SESSION["usu_id"])){
 
 <?php
   }else{
-   header("location:". conectar::ruta() ."/parcial3Portafolio/views/404.php");
+   header("location:". conectar::ruta() ."views/404.php");
   }
 ?>

@@ -1,8 +1,8 @@
 <?php 
-require_once("./config/conexion.php");
+require_once("../config/conexion.php");
 
 if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
-  require_once("models/Usuario.php");
+  require_once("../model/usuario.php");
   $usuario = new Usuario();
   $usuario ->login();
 }
@@ -15,7 +15,8 @@ if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Log in</title>
-  <?php include("views/modulos/head.php");?>
+  <?php include("../views/modulos/head.php");?>
+  <link rel="stylesheet" href="../public/dist/css/adminlte.css">
 
 </head>
 <body class="hold-transition login-page">
