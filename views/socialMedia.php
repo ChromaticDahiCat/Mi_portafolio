@@ -5,8 +5,8 @@ if (isset($_SESSION["usu_id"])){
 ?>
 
 <!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
-<?php require_once("mntModalsocialmedia.php"); ?>
-<?php require_once("modulos/Js.php"); ?>
+<?php require_once("./modulos/mntModalsocialmedia.php"); ?>
+<?php require_once("./modulos/js.php"); ?>
 <script type="text/javascript" src="js/socialMedia.js"></script>
 
 
@@ -91,16 +91,11 @@ if (isset($_SESSION["usu_id"])){
             <th class="wd-10p"></th>
             </tr>
         </thead>
-        <tbody><font></font>
-        <tr><font></font>
-            <td>Row 1 Data 1</td><font></font>
-            <td>Row 1 Data 2</td><font></font>
-        </tr><font></font>
-        <tr><font></font>
-            <td>Row 2 Data 1</td><font></font>
-            <td>Row 2 Data 2</td><font></font>
-        </tr><font></font>
-    </tbody><font></font>
+        <tbody>
+          <?php
+          
+          ?>
+        </tbody>
         </table>
         </div>
       </div>

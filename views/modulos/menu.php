@@ -1,3 +1,5 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -27,7 +29,7 @@
         
           <li class="nav-item">
             <a href="http://localhost/parcial3Portafolio/views/inicio.php" class="nav-link">
-            <i class="nav-icon fas fa-home"></i>
+            <i class='bx bxs-home-alt-2' style='color:#ffffff' ></i>
               <p>
                 Inicio
                 
@@ -36,8 +38,7 @@
           </li>
           <li class="nav-item">
             <a href="http://localhost/parcial3Portafolio/views/perfil.php" class="nav-link">
-            <i class="nav-icon fas fa-universal-access"></i>  
-            <i class="bx bxs-universal-access"></i>
+            <i class='bx bxs-user-check'></i>  
               <p>
                 Perfil
                 
@@ -46,7 +47,7 @@
           </li>
           <li class="nav-item">
             <a href="http://localhost/parcial3Portafolio/views/estudios.php" class="nav-link">
-              <i class="nav-icon fas fa-school"></i>
+            <i class='bx bxs-school'></i>
               <p>
                 Estudios
                 
@@ -54,9 +55,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="http://localhost/parcial3Portafolio/views/info_peronal.php" class="nav-link">
-              <i class="nav-icon fas fa-detaill"></i>
-              <i class='bx bx-detail'></i>
+            <a href="http://localhost/parcial3Portafolio/views/informacion_personal.php" class="nav-link">
+              <i class='bx bxs-comment-detail'></i>
               <p>
                 Información Personal
                 
@@ -64,8 +64,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="http://localhost/parcial3Portafolio/views/trabajos.php" class="nav-link">
-              <i class="nav-icon fas fa-detail"></i>
+            <a href="http://localhost/parcial3Portafolio/views/trabajos_realizados.php" class="nav-link">
+            <i class='bx bx-objects-vertical-center'></i>
               <p>
                 Trabajos Realizados
                 
@@ -73,8 +73,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="http://localhost/parcial3Portafolio/views/experiencia_lab.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="http://localhost/parcial3Portafolio/views/experiencia.php" class="nav-link">
+            <i class='bx bx-briefcase-alt'></i>
               <p>
                 Experiencia Laboral
                 
@@ -83,7 +83,7 @@
           </li>
           <li class="nav-item">
             <a href="http://localhost/parcial3Portafolio/views/socialMedia.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <i class='bx bx-network-chart'></i>
               <p>
                 Redes Sociales
                 
@@ -115,3 +115,5 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

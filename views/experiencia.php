@@ -5,7 +5,7 @@ if (isset($_SESSION["usu_id"])){
 ?>
 
 <!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
-<?php require_once("mntModalsocialmedia.php"); ?>
+<?php require_once("./modulos/mntModalsocialmedia.php"); ?>
 <?php require_once("modulos/Js.php"); ?>
 <script type="text/javascript" src="js/socialMedia.js"></script>
 
@@ -37,7 +37,7 @@ if (isset($_SESSION["usu_id"])){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Admin de Redes Sociales</font></font></h1>
+            <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Experiencia Laboral</font></font></h1>
           </div>
         </div>
       </div>
