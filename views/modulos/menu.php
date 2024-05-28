@@ -27,7 +27,7 @@
         
           <li class="nav-item">
             <a href="http://localhost/parcial3Portafolio/views/inicio.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-home"></i>
               <p>
                 Inicio
                 
@@ -36,7 +36,8 @@
           </li>
           <li class="nav-item">
             <a href="http://localhost/parcial3Portafolio/views/perfil.php" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-universal-access"></i>  
+            <i class="bx bxs-universal-access"></i>
               <p>
                 Perfil
                 
@@ -44,10 +45,57 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/Estudios.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="http://localhost/parcial3Portafolio/views/estudios.php" class="nav-link">
+              <i class="nav-icon fas fa-school"></i>
               <p>
                 Estudios
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost/parcial3Portafolio/views/info_peronal.php" class="nav-link">
+              <i class="nav-icon fas fa-detaill"></i>
+              <i class='bx bx-detail'></i>
+              <p>
+                Información Personal
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost/parcial3Portafolio/views/trabajos.php" class="nav-link">
+              <i class="nav-icon fas fa-detail"></i>
+              <p>
+                Trabajos Realizados
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost/parcial3Portafolio/views/experiencia_lab.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Experiencia Laboral
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost/parcial3Portafolio/views/socialMedia.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Redes Sociales
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost/parcial3Portafolio/views/salir.php" class="nav-link">
+              <i class="nav-icon fas fa-log-out"></i>
+              <i class="bx bx-log-out"></i>
+              <p>
+                Salir
                 
               </p>
             </a>

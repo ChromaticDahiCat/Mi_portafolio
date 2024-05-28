@@ -2,7 +2,7 @@
 define("BASE_URL","/parcial3Portafolio/views/");
 require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +20,8 @@ if (isset($_SESSION["usu_id"])){
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="../public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 </head>
+
+
 <body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
 <div class="wrapper">
 
