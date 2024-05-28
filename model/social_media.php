@@ -53,4 +53,13 @@
             $sql->execute();
             return $resultado=$sql->fetchAll();
         }
+        public function get_socialMediaXid($socmed_id){
+            $social = parent::conexion();
+            parent::set_names();
+            $sql="SELECT * FROM social_media WHERE est=1 AND socmed_id=?";
+            $sql=$social->prepare($sql);
+            $sql->bindValue (1, $socmed_id);
+            $sql->execute();
+            return $resultado=$sql->fetchAll();
+        }
     }

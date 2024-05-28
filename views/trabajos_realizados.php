@@ -4,6 +4,12 @@ require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
 ?>
 
+<!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
+<?php require_once("mntModalsocialmedia.php"); ?>
+<?php require_once("modulos/Js.php"); ?>
+<script type="text/javascript" src="js/socialMedia.js"></script>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,25 +82,26 @@ if (isset($_SESSION["usu_id"])){
           </div>
         </div>
         <div class="card-body">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Icono</font></font></th>
-                <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Enlace</font></font></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><i class="fas fa-facebook-square"></i></td>
-                <td>
-                <tr>
-                <td><i class="fas fa-facebook-square"></i></td>
-                <td><a href="#">Enlace de Facebook</a></td> </tr>
-              <tr>
-                <td><i class="fas fa-twitter-square"></i></td>
-                <td><a href="#">Enlace de Twitter</a></td> </tr>
-              </tbody>
-          </table>
+        <table id="socialMedia_data" class="table display responsive wrap">
+        <thead>
+            <tr>
+            <th class="wd-15p">Icono</th>
+            <th class="wd-15p">Enlace</th>
+            <th class="wd-10p"></th>
+            <th class="wd-10p"></th>
+            </tr>
+        </thead>
+        <tbody><font></font>
+        <tr><font></font>
+            <td>Row 1 Data 1</td><font></font>
+            <td>Row 1 Data 2</td><font></font>
+        </tr><font></font>
+        <tr><font></font>
+            <td>Row 2 Data 1</td><font></font>
+            <td>Row 2 Data 2</td><font></font>
+        </tr><font></font>
+    </tbody><font></font>
+        </table>
         </div>
       </div>
 
@@ -130,3 +137,4 @@ if (isset($_SESSION["usu_id"])){
    header("location:". conectar::ruta() ."views/404.php");
   }
 ?>
+ <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script

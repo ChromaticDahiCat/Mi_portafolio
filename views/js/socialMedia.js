@@ -30,6 +30,41 @@ function guardaryeditar(e) {
         }
     });
 }
+function editar(socmed_id) {
+    $.post("/Portafolio/controller/social_media.php?opc=mostrar", {socmed_id:socmed_id}, function (data) {
+        data= JSON.parse(data);
+        //console.log(data);
+        $('#socmed_id').val(data.socmed_id);
+        $('#socmed_icono').val(data.socmed_icono);
+        $('#socmed_url').val(data.socmed_url);
+    });
+    $('#titulo_modal').html('Editar Red');
+    $('#modalcrearRedes').modal('show');
+}
+    // Habilitar boton de eliminar de nuestravista
+
+function eliminar (socmed_id) {
+    Swal.fire({
+        title: 'Eliminar!',
+        text: 'Desea eleminar el Registro?',
+        icon: 'error',
+        showCancelButton: true,
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar',
+    }).then((result)=>{
+        if (result.value) {
+            $.post("/Portafolio/controller/social_media.php?opc=eliminar", {socmed_id:socmed_id}, function (data) { $('#socialMedia_data').DataTable().ajax.reload();
+            Swal.fire({
+                title: 'Correcto!',
+                text: 'Se Elimino Correctamente',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            })
+            });
+        }
+        });
+    }
+
 $(document).ready(function(){
     $('#socialMedia_data'). DataTable({
         "aProcessing": true,
@@ -43,7 +78,7 @@ $(document).ready(function(){
             url:"/parcial3Portafolio/controller/social_media.php?opc=listar",
             type:"post"
         },
-    
+        
 
 
         "bDestroy": true,
