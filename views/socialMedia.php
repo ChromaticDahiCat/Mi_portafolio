@@ -4,10 +4,7 @@ require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
 ?>
 
-<!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
-<?php require_once("./modulos/mntModalsocialmedia.php"); ?>
-<?php require_once("./modulos/js.php"); ?>
-<script type="text/javascript" src="js/socialMedia.js"></script>
+
 
 
 <!DOCTYPE html>
@@ -108,22 +105,16 @@ if (isset($_SESSION["usu_id"])){
 
 </div>
 
+<?php require_once("modulos/js.php"); ?>
+<script type="text/javascript" src="js/socialMedia.js"></script>
 
-<script src="../plugins/jquery/jquery.min.js"></script>
-<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
+<?php require_once("./modulos/mntModalsocialmedia.php"); ?>
 
-<script src="../dist/js/adminlte.js"></script>
-<script src="../dist/js/demo.js"></script>
+
 </body>
 </html>
 
-<?php require_once("views/modulos/js.php"); ?>
-<script type="text/javascript" src="js/socialMedia.js"></script>
 
 
 

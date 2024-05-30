@@ -1,7 +1,7 @@
 <?php
     require_once("../config/conexion.php");
 
-    require_once("../models/social_media.php");
+    require_once("../model/social_media.php");
 
     $social_media = new SocialMedia();
 

@@ -91,7 +91,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="http://localhost/parcial3Portafolio/views/salir.php" class="nav-link">
+            <a href="http://localhost/parcial3Portafolio/views/logout.php" class="nav-link">
               <i class="nav-icon fas fa-log-out"></i>
               <i class="bx bx-log-out"></i>
               <p>

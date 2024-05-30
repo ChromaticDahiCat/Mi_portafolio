@@ -11,7 +11,7 @@ function guardaryeditar(e) {
     var formData = new FormData($("#socialMedia_form")[0]);
 
     $.ajax({
-        url: "/parcial3Portafolio/controller/social_media.php?opc=guardaryeditar",
+        url: "/parcial3Portafolio/controller/social_media.php?op=guardaryeditar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -31,7 +31,7 @@ function guardaryeditar(e) {
     });
 }
 function editar(socmed_id) {
-    $.post("/Portafolio/controller/social_media.php?opc=mostrar", {socmed_id:socmed_id}, function (data) {
+    $.post("/Portafolio/controller/social_media.php?op=mostrar", {socmed_id:socmed_id}, function (data) {
         data= JSON.parse(data);
         //console.log(data);
         $('#socmed_id').val(data.socmed_id);
@@ -53,7 +53,7 @@ function eliminar (socmed_id) {
         cancelButtonText: 'Cancelar',
     }).then((result)=>{
         if (result.value) {
-            $.post("/Portafolio/controller/social_media.php?opc=eliminar", {socmed_id:socmed_id}, function (data) { $('#socialMedia_data').DataTable().ajax.reload();
+            $.post("/Portafolio/controller/social_media.php?op=eliminar", {socmed_id:socmed_id}, function (data) { $('#socialMedia_data').DataTable().ajax.reload();
             Swal.fire({
                 title: 'Correcto!',
                 text: 'Se Elimino Correctamente',
@@ -75,7 +75,7 @@ $(document).ready(function(){
             'csvHtml5',
         ],
         "ajax": {
-            url:"/parcial3Portafolio/controller/social_media.php?opc=listar",
+            url:"/parcial3Portafolio/controller/social_media.php?op=listar",
             type:"post"
         },
         

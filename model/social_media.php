@@ -9,15 +9,7 @@
             $sql->execute();
             return $resultado=$sql->fetchAll();
         }
-        public function get_socialMedia_con_parametro($socmed_id){
-            $social = parent::conexion();
-            parent::set_names();
-            $sql="SELECT * FROM social_media WHERE socmed_id=?";
-            $sql=$social->prepare($sql);
-            $sql->bindValue(1,$socmed_id);
-            $sql->execute();
-            return $resultado=$sql->fetchAll();
-        }
+
         public function insert_socialMedia($socmed_icono,$socmed_url){
             $social = parent::conexion();
             parent::set_names();
