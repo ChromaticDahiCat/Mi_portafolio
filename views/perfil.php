@@ -1,3 +1,9 @@
+<?php
+define("BASE_URL","/parcial3Portafolio/views/");
+require_once("../config/conexion.php");
+if (isset($_SESSION["usu_id"])){
+?>
+
 <?php include("./modulos/menu.php");?>
 
 <!DOCTYPE html>
@@ -45,3 +51,8 @@
     </div>
 </body>
 </html>
+<?php
+  }else{
+   header("location:". conectar::ruta() ."views/404.php");
+  }
+?>

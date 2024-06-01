@@ -2,10 +2,24 @@
 define("BASE_URL","/parcial3Portafolio/views/");
 require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
+  
+  class Experiencia extends Conectar {
+    public function getAllExperiencia() {
+        $conectar = $this->conexion();
+        $this->set_names();
+        $sql = "SELECT info_nacimiento, info_celular, info_email, info_url, info_direccion FROM informacion_personal";
+        $stmt = $conectar->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
+
+$experiencia = new Experiencia();
+$data = $experiencia->getAllExperiencia();
 ?>
 
 <!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
-<?php require_once("modulos/mntModalsocialmedia.php"); ?>
+<?php require_once("./modulos/mntModalsocialmedia.php"); ?>
 <?php require_once("modulos/Js.php"); ?>
 <script type="text/javascript" src="js/socialMedia.js"></script>
 
@@ -85,12 +99,28 @@ if (isset($_SESSION["usu_id"])){
         <table id="socialMedia_data" class="table display responsive wrap">
         <thead>
             <tr>
-            <th class="wd-15p">Icono</th>
-            <th class="wd-15p">Enlace</th>
-            <th class="wd-10p"></th>
-            <th class="wd-10p"></th>
+            <th class="wd-15p">Fecha Nacimiento</th>
+            <th class="wd-15p">Celular</th>
+            <th class="wd-10p">Email</th>
+            <th class="wd-10p">Links</th>
+            <th class="wd-10p">Dirección</th>
+            
             </tr>
         </thead>
+        <tbody>
+        <?php
+        // Display table data
+        foreach ($data as $row) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['info_nacimiento']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['info_celular']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['info_email']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['info_url']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['info_direccion']) . "</td>";
+            echo "</tr>";
+        }
+        ?>
+        </tbody>
         </table>
         </div>
       </div>

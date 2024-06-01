@@ -2,11 +2,25 @@
 define("BASE_URL","/parcial3Portafolio/views/");
 require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
+  
+  class Experiencia extends Conectar {
+    public function getAllExperiencia() {
+        $conectar = $this->conexion();
+        $this->set_names();
+        $sql = "SELECT  est_titulo,  est_lugar,  est_anno  FROM estudios";
+        $stmt = $conectar->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
+
+$experiencia = new Experiencia();
+$data = $experiencia->getAllExperiencia();
 ?>
 
 <!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
 <?php require_once("./modulos/mntModalsocialmedia.php"); ?>
-<?php require_once("./modulos/Js.php"); ?>
+<?php require_once("modulos/Js.php"); ?>
 <script type="text/javascript" src="js/socialMedia.js"></script>
 
 
@@ -85,22 +99,23 @@ if (isset($_SESSION["usu_id"])){
         <table id="socialMedia_data" class="table display responsive wrap">
         <thead>
             <tr>
-            <th class="wd-15p">Icono</th>
-            <th class="wd-15p">Enlace</th>
-            <th class="wd-10p"></th>
-            <th class="wd-10p"></th>
+            <th class="wd-15p">Titulo</th>
+            <th class="wd-15p">Lugar</th>
+            <th class="wd-10p">Año</th>
             </tr>
         </thead>
-        <tbody><font></font>
-        <tr><font></font>
-            <td>Row 1 Data 1</td><font></font>
-            <td>Row 1 Data 2</td><font></font>
-        </tr><font></font>
-        <tr><font></font>
-            <td>Row 2 Data 1</td><font></font>
-            <td>Row 2 Data 2</td><font></font>
-        </tr><font></font>
-    </tbody><font></font>
+        <tbody>
+        <?php
+        // Display table data
+        foreach ($data as $row) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['est_titulo']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['est_lugar']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['est_anno']) . "</td>";
+            echo "</tr>";
+        }
+        ?>
+        </tbody>
         </table>
         </div>
       </div>
@@ -137,4 +152,4 @@ if (isset($_SESSION["usu_id"])){
    header("location:". conectar::ruta() ."views/404.php");
   }
 ?>
- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script
+ <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

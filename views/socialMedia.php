@@ -2,6 +2,23 @@
 define("BASE_URL","/parcial3Portafolio/views/");
 require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
+  
+
+  class SocialMedia extends Conectar {
+    public function getAllSocialMedia() {
+        $conectar = $this->conexion();
+        $this->set_names();
+        $sql = "SELECT socmed_icono, socmed_url FROM social_media";
+        $stmt = $conectar->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
+
+$socialMedia = new SocialMedia();
+$data = $socialMedia->getAllSocialMedia();
+
+
 ?>
 
 
@@ -84,14 +101,25 @@ if (isset($_SESSION["usu_id"])){
             <tr>
             <th class="wd-15p">Icono</th>
             <th class="wd-15p">Enlace</th>
-            <th class="wd-10p"></th>
-            <th class="wd-10p"></th>
             </tr>
         </thead>
         <tbody>
-          <?php
-          
-          ?>
+        <?php
+        // Display table data
+        foreach ($data as $row) {
+            echo "<tr>";
+            foreach ($row as $key => $cell) {
+                if ($key == 'socmed_icono') {
+                    // Render the icon as HTML
+                    echo "<td>" . $cell . "</td>";
+                } else {
+                    // Render other fields as plain text
+                    echo "<td>" . htmlspecialchars($cell) . "</td>";
+                }
+            }
+            echo "</tr>";
+        }
+        ?>
         </tbody>
         </table>
         </div>

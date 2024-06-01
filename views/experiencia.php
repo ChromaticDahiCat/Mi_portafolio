@@ -2,6 +2,20 @@
 define("BASE_URL","/parcial3Portafolio/views/");
 require_once("../config/conexion.php");
 if (isset($_SESSION["usu_id"])){
+  
+  class Experiencia extends Conectar {
+    public function getAllExperiencia() {
+        $conectar = $this->conexion();
+        $this->set_names();
+        $sql = "SELECT exp_titulo, exp_lugar, exp_annoIni, exp_annoFin FROM experiencia";
+        $stmt = $conectar->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+}
+
+$experiencia = new Experiencia();
+$data = $experiencia->getAllExperiencia();
 ?>
 
 <!-- archivo que contiene modal se requiere antes de la la linea en que requieren archivojs.php-->
@@ -85,22 +99,25 @@ if (isset($_SESSION["usu_id"])){
         <table id="socialMedia_data" class="table display responsive wrap">
         <thead>
             <tr>
-            <th class="wd-15p">Icono</th>
-            <th class="wd-15p">Enlace</th>
-            <th class="wd-10p"></th>
-            <th class="wd-10p"></th>
+            <th class="wd-15p">Titulo</th>
+            <th class="wd-15p">Lugar</th>
+            <th class="wd-10p">Año Inicial</th>
+            <th class="wd-10p">Año Final</th>
             </tr>
         </thead>
-        <tbody><font></font>
-        <tr><font></font>
-            <td>Row 1 Data 1</td><font></font>
-            <td>Row 1 Data 2</td><font></font>
-        </tr><font></font>
-        <tr><font></font>
-            <td>Row 2 Data 1</td><font></font>
-            <td>Row 2 Data 2</td><font></font>
-        </tr><font></font>
-    </tbody><font></font>
+        <tbody>
+        <?php
+        // Display table data
+        foreach ($data as $row) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['exp_titulo']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['exp_lugar']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['exp_annoIni']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['exp_annoFin']) . "</td>";
+            echo "</tr>";
+        }
+        ?>
+        </tbody>
         </table>
         </div>
       </div>

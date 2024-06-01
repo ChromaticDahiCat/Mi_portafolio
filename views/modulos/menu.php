@@ -2,7 +2,7 @@
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -86,6 +86,15 @@
             <i class='bx bx-network-chart'></i>
               <p>
                 Redes Sociales
+                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost/parcial3Portafolio/views/administracion.php" class="nav-link">
+            <i class='bx bx-user-pin' style='color:#ffffff' ></i>
+              <p>
+                Administracion
                 
               </p>
             </a>
